@@ -12,7 +12,7 @@
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
       
       // Receiver email address
-      $receiver = "syugicontact@gmail.com"; // Replace with your actual email address
+      $receiver = "example@gmail.com"; // Replace with your actual email address
       
       // Email subject
       $subject = "From: $name <$email>";
