@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Mail setup
-    $to = "syugicontact@example.com";  // Replace with your email
+    $to = "example@example.com";  // Replace with your email
     $subject = "New message from $name";
     $body = "Name: $name\nPhone: $phone\nEmail: $email\n\nMessage:\n$message";
 
