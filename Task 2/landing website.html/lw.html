@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        /* Reset some default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Colors */
+        :root {
+            --primary-color: #00aaff;
+            --secondary-color: #0077cc;
+            --light-color: #f4f4f4;
+            --dark-color: #333;
+            --accent-color: #ff4081;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--dark-color);
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        .btn {
+            background: var(--accent-color);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--primary-color);
+        }
+
+        /* Features Section */
+        .features {
+            background: var(--light-color);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            color: #e0f7fa;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--secondary-color);
+            padding: 60px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .testimonials h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--accent-color);
+        }
+
+        .testimonial {
+            margin: 20px;
+            font-style: italic;
+            color: #fff;
+        }
+
+        .testimonial h3 {
+            margin-top: 10px;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Welcome to My Landing Page</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Your Perfect Landing Page Starts Here</h2>
+            <p>Bringing your ideas to life with modern web development techniques.</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Our Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Responsive Design</h3>
+                    <p>Our landing pages are fully responsive, ensuring a seamless experience on mobile, tablet, and desktop devices.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Fast Loading Speed</h3>
+                    <p>Optimized code ensures that your page loads quickly, providing a great user experience without delays.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>SEO Friendly</h3>
+                    <p>We make sure your landing page is optimized for search engines, helping you rank higher and attract more visitors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial">
+                <p>"This team helped me create the perfect landing page for my business. It’s responsive, fast, and looks amazing!"</p>
+                <h3>- John Doe, CEO of XYZ</h3>
+            </div>
+            <div class="testimonial">
+                <p>"I was impressed by how quickly they delivered a high-quality, SEO-friendly landing page that fits all our needs."</p>
+                <h3>- Sarah Smith, Marketing Lead</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

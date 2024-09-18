@@ -1,0 +1,302 @@
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 100%;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+a {
+  color: black;
+
+}
+
+a:hover {
+  transition: all 0.2s ease;
+  color: #111;
+}
+
+nav {
+  height: 80px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px 0px 100px;
+}
+
+nav .logo {
+  font-size: 27px;
+  font-weight: 600;
+  color: #FBB741;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background-color: #111;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+
+  color: black;
+  background: #fff;
+  transition: all 0.4s ease-out;
+
+}
+
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+#click {
+  display: none;
+
+}
+
+.content {
+  position: relative;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 2em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  margin-left: 20px;
+
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px whitesmoke;
+}
+
+.content h2:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 1s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 90%,
+        100% 100%,
+        0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 96%,
+        100% 100%,
+        0% 100%);
+  }
+
+}
+
+.container {
+
+  position: relative;
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+  display: table;
+  transition: all 0.2s ease-in;
+
+}
+
+.box {
+  display: inline-block;
+  background-color: rosybrown;
+  height: 65vh;
+  width: 350px;
+  margin: 20px 0;
+  margin-right: 20px;
+
+  transition: all 0.1s ease-out;
+  border: 1px solid black;
+  border-radius: 0.9rem;
+  font-size: 10px;
+}
+
+.box:hover {
+  height: 80vh;
+  width: 400px;
+  transition: all 0.1s ease-in;
+}
+
+.box h1 {
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.details {
+  display: inline-block;
+  opacity: 0;
+
+}
+
+.box:hover .details {
+  margin: 10px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+  -webkit-transform: scale(0.8);
+  -ms-transorm: scale(0.8);
+  transform: scale(1.2);
+
+
+}
+
+.box:hover .todoimg {
+
+  width: 99%;
+  height: 370px;
+
+}
+
+.details h2 {
+  color: navy;
+  font-weight: bold;
+  text-align: center;
+  font-size: small;
+  letter-spacing: 1px;
+  line-height: -10px;
+  font-size: 16px;
+  transition: all 0 ease-out;
+
+}
+
+.calciimg {
+
+  margin: 0 auto;
+  margin-top: 1px;
+  border-radius: 1.5rem;
+}
+
+.pwdgimg {
+  border-radius: 1.5rem;
+  margin-top: 1px;
+}
+
+.todoimg {
+  margin: 0 auto;
+  margin-top: 1px;
+  border-radius: 10px;
+}
+
+/* copyright content */
+.bottom-container {
+  position: relative;
+  background-color: #66BFBF;
+
+  padding: 50px 0 50px 0;
+}
+
+
+/* phone */
+@media screen and (max-width: 900px) {
+  /* nav bar */
+
+  nav .menu-btn i {
+    display: block;
+
+  }
+
+  #click:checked~.menu-btn i:before {
+    content: "\f00d";
+  }
+
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    transition-duration: 0.7s;
+    z-index: 9999;
+
+  }
+
+  #click:checked~ul {
+    left: 0%;
+  }
+
+  nav ul li {
+    margin: 40px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    display: block;
+
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: cyan;
+    background: none;
+    transition: all 0.5s ease;
+
+  }
+
+  .box {
+    margin: 15px;
+    height: 50vh;
+    width: 330px;
+
+  }
+
+  .calciimg,
+  .pwdgimg,
+  .todoimg {
+    margin-bottom: 0;
+    height: 280px;
+    width: 300px
+  }
+
+}
